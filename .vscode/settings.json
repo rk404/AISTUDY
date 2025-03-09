@@ -1,5 +1,11 @@
 {
 "code-runner.runInTerminal": true,
 "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
-"editor.fontLigatures": true
+"editor.fontLigatures": true,
+"cSpell.language": "en,pl",
+"python.testing.pytestArgs": [
+    "python"
+],
+"python.testing.unittestEnabled": false,
+"python.testing.pytestEnabled": true
 }

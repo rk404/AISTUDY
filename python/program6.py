@@ -61,9 +61,9 @@ print('przykład\r tab')
 
 liczba = int(input('Podaj liczbę: '))
 potega = pow(liczba, 2)
-potrga3 = liczba**3
+potęga3 = liczba**3
 print('Liczba podniesiona do potęgi:', potega)
-print('Liczba podniesiona do potęgi 3:', potrga3)"""
+print('Liczba podniesiona do potęgi 3:', potęga3)"""
 
 liczba1 = int(input('Podaj pierwszą liczbę: '))
 liczba2 = int(input('Podaj drugą liczbę:'))
@@ -90,3 +90,14 @@ with open('plik.txt', 'r') as f:
 
 def dodaj(a, b):
     return a + b
+
+
+def oblicz_potegi(liczba, wykładnik):
+    potega = pow(liczba, wykładnik)
+    return potega
+
+
+liczba = int(input('Podaj liczbę: '))
+wykładnik = int(input('Podaj wykładnik: '))
+potega = oblicz_potegi(liczba, wykładnik)
+print('Liczba podniesiona do potęgi: ', potega)
