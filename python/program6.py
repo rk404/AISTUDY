@@ -101,3 +101,6 @@ liczba = int(input('Podaj liczbę: '))
 wykładnik = int(input('Podaj wykładnik: '))
 potega = oblicz_potegi(liczba, wykładnik)
 print('Liczba podniesiona do potęgi: ', potega)
+
+
+print(type(potega))

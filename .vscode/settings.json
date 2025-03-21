@@ -7,5 +7,25 @@
     "python"
 ],
 "python.testing.unittestEnabled": false,
-"python.testing.pytestEnabled": true
+"python.testing.pytestEnabled": true,
+"sqltools.connections": [
+    {
+        "oracleOptions": {
+            "privilege": "Normal",
+            "thickMode": false,
+            "autoCommit": false,
+            "lowerCase": false,
+            "limitPrefetchRows": false
+        },
+        "previewLimit": 50,
+        "server": "10.10.17.174",
+        "port": 1525,
+        "driver": "Oracle",
+        "name": "GSR.SZKOL",
+        "group": "GSR",
+        "database": "teta",
+        "username": "teta_admin",
+        "password": "admin#teta"
+    }
+]
 }
