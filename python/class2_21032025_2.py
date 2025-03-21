@@ -25,11 +25,13 @@ if x < y:
 elif x == y:
     print('x = y')
 else:
-    print('rsrr') """
+    print('rsrr') 
 
 
 rok = int(input('Podaj rok: '))
 if (np.mod(rok,4) == 0 and np.mod(rok,100) != 0) or np.mod(rok,400) != 0:
     print('Tak')
 else:
-    print('Nie')
+    print('Nie') """
+
+

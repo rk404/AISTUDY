@@ -1,4 +1,4 @@
-"""print('Ten program dodaje 2 liczby')
+print('Ten program dodaje 2 liczby')
 num1 = input('Wpisz pierwszą liczbę: ')
 num1 = int(num1)
 num2 = input('Wpisz drugą liczbę: ')
@@ -35,9 +35,9 @@ kasia = czarek
 print('Kasia ma lat: ', kasia)
 
 zwierz = input('Jakie jest Twoje ulubione zwierze?')
-print('Twoje ulubione zwierze to:', zwierz)"""
+print('Twoje ulubione zwierze to:', zwierz)
 
-"""bok1 = input('Podaj długość boku 1: ')
+bok1 = input('Podaj długość boku 1: ')
 bok2 = input('Podaj długość boku 2: ')
 bok3 = input('Podaj długość boku 3: ')
 obwod = float(bok1) + float(bok2) + float(bok3)
@@ -63,7 +63,7 @@ liczba = int(input('Podaj liczbę: '))
 potega = pow(liczba, 2)
 potęga3 = liczba**3
 print('Liczba podniesiona do potęgi:', potega)
-print('Liczba podniesiona do potęgi 3:', potęga3)"""
+print('Liczba podniesiona do potęgi 3:', potęga3)
 
 liczba1 = int(input('Podaj pierwszą liczbę: '))
 liczba2 = int(input('Podaj drugą liczbę:'))
