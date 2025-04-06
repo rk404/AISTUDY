@@ -88,7 +88,7 @@ for i in range(10):
 num = int(input('Podaj liczbę: '))
 suma = 0
 for i in range(1, num+1):
-    suma = suma + 1
+    suma = suma+1
 print('Suma:', suma)
 
 

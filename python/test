@@ -1,0 +1,30 @@
+import math as m
+import cmath as cm
+import numpy as np
+import random as r
+
+
+def fibonacci(n):
+    fib_sequence = [0, 1]
+    while len(fib_sequence) < n:
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+    return fib_sequence
+
+# Przykład użycia
+n = int(input("Podaj liczbę elementów ciągu Fibonacciego: "))
+fib_sequence = fibonacci(n)
+print(f"Ciąg Fibonacciego o długości {n}: {fib_sequence}") 
+
+
+FIB1 = 0
+FIB2 = 1
+FIB_NEXT = 0
+while FIB_NEXT < 100:   
+    print(FIB1)
+    FIB_NEXT = FIB1 + FIB2
+    FIB1 = FIB2
+    FIB2 = FIB_NEXT
+
+
+for i in range(10):
+    print(i)
