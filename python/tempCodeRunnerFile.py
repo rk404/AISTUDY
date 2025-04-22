@@ -1,6 +1,11 @@
-def potega(x, n):
-    if n == 0:
-        return 1
-    else:
-        return x * potega(x, n - 1)
-print(potega(4, 2))  # 8
+import numpy as np
+
+np.random.seed(0)
+a = np.random.randint(1, 10, 5)
+print(a)
+print("Wylosowane liczby to: ", a)
+
+import pandas as pd
+df = pd.DataFrame(a, columns=["Liczby"])
+print(df)
+print("Wylosowane liczby to: ", df)
