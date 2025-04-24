@@ -574,9 +574,10 @@ kwadrat_slownika()
 """
 
 
+
 def krotka_na_slownik():
     krotka = (1, 2, 3, 4, 5)
-    slownik = {i: i+1 for i in krotka}
+    slownik = {i: i//2 for i in krotka}
     print(krotka)
     print(slownik)
 
@@ -713,6 +714,7 @@ Super! Od dawna chciałam dodać kamień do mojej kolekcji
 """
 
 
+
 def jaka_to_czesc_mowy():
     slowo = input("Podaj słowo: ")
     czesc_mowy = int(input("Jaka to część mowy? (0 - rzeczownik, 1 - czasownik, 2 - przymiotnik): "))
@@ -727,6 +729,8 @@ def jaka_to_czesc_mowy():
 
 
 jaka_to_czesc_mowy()
+
+
 
 """
 38. Napisz program, który przyjmie liczbę i zwróci jej dwukrotność
@@ -844,6 +848,7 @@ odczyt_linia_po_lini()
 43. Stwórz tablicę, a następnie zamień wszystkie liczby nieparzyste na wartość -1
 """
 
+
 import numpy as np
 def tablica_nieparzysta():
     tab1 = np.arange(10).reshape(2, 5)
@@ -851,7 +856,16 @@ def tablica_nieparzysta():
     print(tab1)
 tablica_nieparzysta()
 
-
+"""
+43. Stwórz tablicę czterowymiarową z 40 elementami a następnie zamień wszystkie liczby nieparzyste na wartość -1
+"""
+import numpy as np
+def tablica_nieparzysta():
+    tab1 = np.arange(40).reshape(4, 10)
+    print(tab1)
+    tab1[tab1 % 2 == 1] = -1
+    print(tab1)
+tablica_nieparzysta()
 """
 44. Stwórz tablicę, która będzie posiadała tylko element wspólne poniższych tablic
 tab1 = [0 1 2 3 4 5 6 7 8 9]
@@ -879,3 +893,23 @@ def tablica_wsp():
     tab3 = np.where(tab1 == tab2)[0]
     print("Wspólne elementy:", tab3)
 tablica_wsp()
+
+"""
+45. Napisz program, który policzy sumę elementów tablicy"""
+import numpy as np
+def suma_tablicy():
+    tab1 = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+    suma = np.sum(tab1)
+    print("Suma elementów tablicy to: ", suma)
+suma_tablicy()
+
+"""
+46. Napisz program, który policzy średnią elementów tablicy"""
+import numpy as np
+def srednia_tablicy():
+    tab1 = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+    srednia = np.mean(tab1)
+    print("Średnia elementów tablicy to: ", srednia)
+srednia_tablicy()
+
+
