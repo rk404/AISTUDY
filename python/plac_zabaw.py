@@ -60,9 +60,12 @@ dane = plik.readlines()
 plik.close()
 
 """
-otwórz plik friendly competition.csv i zapisz dane do zmiennej
+otwórz plik friendly competition.csv i zapisz dane do zmiennej korzystając z pandas
 """
-plik = open("\\python\\Friendly Competition.csv", "r")
-dane = plik.readlines()
-plik.close()
+import pandas as pd
+df = pd.read_csv("Friendly Competition.csv")
+print(df)
+
+"""
+
 
