@@ -565,5 +565,21 @@ def kwadrat_slownika():
     nowy_slownik = {klucze:wartosc**2 for (klucze,wartosc) in slownik.items() if wartosc==int(wartosc)} 
     print(slownik)
     print(nowy_slownik)
+
+
 kwadrat_slownika()
+
+"""
+31. Utwórz krotkę i przerób ją na klucze słownika. Wartości mogą być dowolne.
+"""
+
+
+def krotka_na_slownik():
+    krotka = (1, 2, 3, 4, 5)
+    slownik = {i: i+1 for i in krotka}
+    print(krotka)
+    print(slownik)
+
+
+krotka_na_slownik()
 
