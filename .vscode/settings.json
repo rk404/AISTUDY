@@ -27,5 +27,6 @@
         "username": "teta_admin",
         "password": "admin#teta"
     }
-]
+],
+"python.analysis.autoImportCompletions": false
 }

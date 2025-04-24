@@ -21,3 +21,34 @@ import pandas as pd
 df = pd.DataFrame(a, columns=["Liczby"])
 print(df)
 print("Wylosowane liczby to: ", df)
+
+slownik = {1: 'jeden', 2: 'dwa', 3: 'trzy'}
+slownik[4] = 'Pięć'
+print(slownik)
+
+
+plik = open("test_plik.txt")
+odczyt =plik.read()
+plik.close()
+
+
+tablica2d = ([[3, 5, 2], [5, 2, 7]])
+# dostęp do elementów tablicy
+for element in tablica2d:
+ print(element)
+
+tablica2d = ([[3, 5, 2], [5, 2, 7]])
+#dostęp do poszczególnych wartości tablicy
+for element in tablica2d:
+    for wartosc in element:
+        print(wartosc)
+
+import numpy as np
+tablica = np.arange(1, 20, 2).reshape(2, 5)
+print(tablica)
+
+maska = tablica > 10
+zamaskowane = np.ma.masked_where(maska, tablica)
+print(zamaskowane)
+
+np.savetxt("plik_testowy.csv", tablica, delimiter=",")

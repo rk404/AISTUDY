@@ -584,4 +584,284 @@ def krotka_na_slownik():
 krotka_na_slownik()
 
 
+"""
+32. Pamiętacie zadanie z rabarbarem?
+Teraz w końcu możecie wybrać dowolne słowo :D
+Napisz program, który policzy ile z każdej litery występuje w słowie “rabarbar”
+Oczekiwany output:
+W slowie "rabarbar" występuja 3 litery "r“
+W slowie "rabarbar" występuja 3 litery "a“
+W slowie "rabarbar" występuja 2 litery "b"
+"""
 
+
+def liczenie_liter_slow():
+    slownik = {}
+    slowo = input("Podaj słowo: ")
+    for element in slowo:
+        if element not in slownik:
+            slownik[element] = 1
+        else:
+            slownik[element] += 1
+    print(slownik)
+    for i in slownik:
+        print("W słowie", slowo, "występują", slownik[i], "litery", i)
+
+
+liczenie_liter_slow()
+
+
+"""
+33. Napisz program, który poda do funkcji listę I wydrukuje kolejno jej elementy
+Lista: ['t', [9, 0], 5.7, 6437]
+"""
+
+
+def drukuj_liste(lista):
+    for i in lista:
+        print(i)
+
+
+def dane_do_druku():
+    Lista = ['t', [9, 0], 5.7, 6437]
+    drukuj_liste(Lista)
+
+
+dane_do_druku()
+
+"""
+34. Napisz program, który wypisze liczbę elementów, które są unikalne na liście.
+lista = ['k', 2, 5, 2, 'mop', 5.4, 'k', 8, False]
+Oczekiwany output:
+Liczba unikalnych elementów to 7
+
+"""
+
+
+def unikale_elementy_listy():
+    lista = ['k', 2, 5, 2, 'mop', 5.4, 'k', 8, False]
+    bufor = []
+    licznik = 0
+    for i in lista:
+        if i not in bufor:
+            licznik = licznik + 1
+            bufor.append(i)
+    print(licznik)
+
+
+unikale_elementy_listy()
+
+
+"""
+35. Napisz program, który przyjmie liczbę i wypisze wszystkie możliwe dzielniki tej liczby.
+Przykładowy output:
+Podaj liczbę: 8
+1
+2
+4
+8
+"""
+
+
+def dzieliniki():
+    liczba = int(input("Podaj liczbę: "))
+    for i in range(liczba):
+        obecna_liczba = i+1
+        if liczba % obecna_liczba == 0:
+            print(obecna_liczba)
+
+
+dzieliniki()
+
+
+"""
+36. Poproś użytkownika, żeby podał string oraz integer. Program powinien wydrukować podany
+string podaną ilość razy.
+Przykładowy output:
+Podaj string: Cześć!
+Podaj liczbę: 3
+Cześć!
+Cześć!
+Cześć!
+"""
+
+
+def drukuj_string():
+    tekst = input("Podaj tekst: ")
+    ile_razy = int(input("Podaj ile razy ma się wydrukować: "))
+    for i in range(ile_razy):
+        print(tekst)
+
+
+drukuj_string()
+
+"""
+37. Zapytaj użytkownika o słowo, następnie jaka to część mowy (rzeczownik, czasownik,
+przymiotnik)
+Jeśli część mowy to 0, zakładamy że słowo to rzeczownik, zdanie brzmi “Super! Od dawna chciałam
+dodać _____ do mojej kolekcji”
+Jeśli część mowy to 1, zakładamy że słowo to czasownik, zdanie brzmi: “Jest taka piękna pogoda, że
+aż się chce _____”
+Jeśli część mowy to 2, zakładamy że słowo to przymiotnik, zdanie brzmi: “Patrząc za okno, niebo jest
+wielkie I ______”
+Weź pod uwagę przypadek, kiedy słowo podane przez użytkownika nie jest ani rzeczownikiem, ani
+czasownikiem, ani przymiotnikiem
+Przykładowy output:
+Podaj słowo: kamień
+Jaka to część mowy? (0 – rzeczownik, 1 – czasownik, 2 – przymiotnik): 0
+Super! Od dawna chciałam dodać kamień do mojej kolekcji
+"""
+
+
+def jaka_to_czesc_mowy():
+    slowo = input("Podaj słowo: ")
+    czesc_mowy = int(input("Jaka to część mowy? (0 - rzeczownik, 1 - czasownik, 2 - przymiotnik): "))
+    if czesc_mowy == 0:
+        print("Super! Od dawna chciałam dodać", slowo,  "do mojej kolekcji")
+    elif czesc_mowy == 1:
+        print("Jest taka piękna pogoda, że aż się chce ", slowo)
+    elif czesc_mowy == 2:
+        print("Patrząc za okno, niebo jest wielkie I ", slowo)
+    else:
+        print("Błędne dane")
+
+
+jaka_to_czesc_mowy()
+
+"""
+38. Napisz program, który przyjmie liczbę i zwróci jej dwukrotność
+Przykładowy output:
+Podaj liczbę: 8
+Dwukrotność 8 to 16
+"""
+
+
+def dwukrotnosc(liczba):
+    wynik = liczba+liczba
+    return wynik
+
+
+liczba = int(input("Podaj liczbę: "))
+wynik = dwukrotnosc(liczba)
+print("Dwukrotność",  liczba, "to", wynik)
+
+
+"""
+39. Napisz program, który powie Ci czy liczba, którą podał użytkownik jest parzysta czy nieparzysta
+Przykładowy output:
+Podaj liczbę: 43
+43 o liczba nieparzysta
+"""
+
+
+def parzystosc(liczba):
+    if liczba % 2 == 0:
+        wynik = "Parzysta"
+    else:
+        wynik = "Nieparzysta"
+    return wynik
+
+
+liczba = int(input("Podaj liczbę: "))
+wynik = parzystosc(liczba)
+print("Podana liczba jest: ", wynik)
+
+
+"""
+40. Będziemy liczyć do 10, chyba że po drodze nam się odechce
+Napisz funkcję, która wydrukuje liczby od 1 do 10 oraz fukncję, która zadecyduje czy chce jej się to
+liczyć.
+Prawdopodobieństwo wydruku każdej z kolejnych liczb to 30%.
+Na końcu zawsze musi wyskoczyć napis: “No to tyle”
+Przykladowy output:
+Będę liczyć do 10, chyba że mi się odechce.
+1
+2
+No to tyle
+
+"""
+
+
+import random
+
+
+def liczenie_do_czasu():
+    zakres = 10
+    for i in range(zakres):
+        prawdopodobienstwo_wydruku = random.random()
+        if prawdopodobienstwo_wydruku < 0.3:
+            print(i+1)
+        else:
+            print("Not to tyle")
+            break
+
+
+liczenie_do_czasu()
+
+
+"""
+41. Stwórz pusty plik, następnie poproś użytkownika, żeby podał treść.
+Sprawdź czy możesz zapisać tę treść do pliku.
+Jeśli tak, to zapisz.
+Na koniec powiedz użytkownikowi ile podał znaków.
+"""
+
+
+def zapis_dp_pliku():
+    plik = open("plik_01.txt", "a")
+    tresc = input("Podaj treść: ")
+    if plik.writable():
+        plik.write(tresc)
+        plik.write("\n")
+        liczba_znakow = len(tresc)
+        print("Podałeś ", liczba_znakow, "znaków.")
+    else:
+        print("Brak uprawnień do zapisu")
+    plik.close()
+
+
+zapis_dp_pliku()
+
+
+"""
+42. Napisz program, który przeczyta zawartość pliku linijka po linijce in wydrukuje treść w taki sam
+sposób.
+"""
+
+
+def odczyt_linia_po_lini():
+    plik = open("plik_01.txt", "r")
+    dane = plik.readlines()
+    for i in dane:
+        if i.isspace():
+            print(i)
+
+
+odczyt_linia_po_lini()
+
+
+"""
+43. Stwórz tablicę, a następnie zamień wszystkie liczby nieparzyste na wartość -1
+"""
+
+import numpy as np
+def tablica_nieparzysta():
+    tab1 = np.arange(10).reshape(2, 5)
+    tab1[tab1%2==1] = -1
+    print(tab1)
+tablica_nieparzysta()
+
+
+"""
+44. Stwórz tablicę, która będzie posiadała tylko element wspólne poniższych tablic
+tab1 = [0 1 2 3 4 5 6 7 8 9]
+tab2 = [3 1 13 557 92 0 6 80 43 9]
+"""
+
+import numpy as np
+def tablica_wsp():
+    tab1 = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+    tab2 = np.array([3, 1, 13, 557, 92, 0, 6, 80, 43, 9])
+    tab3 = np.where(tab1 == tab2)
+    print(tab3)
+tablica_wsp()
