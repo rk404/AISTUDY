@@ -909,6 +909,7 @@ import numpy as np
 def srednia_tablicy():
     tab1 = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
     srednia = np.mean(tab1)
+    print(tab1)
     print("Średnia elementów tablicy to: ", srednia)
 srednia_tablicy()
 
