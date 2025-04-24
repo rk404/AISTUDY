@@ -583,3 +583,5 @@ def krotka_na_slownik():
 
 krotka_na_slownik()
 
+
+
