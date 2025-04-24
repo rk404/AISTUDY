@@ -52,3 +52,17 @@ zamaskowane = np.ma.masked_where(maska, tablica)
 print(zamaskowane)
 
 np.savetxt("plik_testowy.csv", tablica, delimiter=",")
+
+
+
+plik = open("\\python\\Friendly Competition.csv", "r")
+dane = plik.readlines()
+plik.close()
+
+"""
+otwórz plik friendly competition.csv i zapisz dane do zmiennej
+"""
+plik = open("\\python\\Friendly Competition.csv", "r")
+dane = plik.readlines()
+plik.close()
+
