@@ -1,10 +1,9 @@
-import pandas as pd
-
-lista   = [1, 'test', 3, 4, 5, 6, 7, 8, 9, 10]
-
-#seria = pd.Series(lista)
-seria2 = pd.Series(lista, index=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'])
-print(seria2['b'])
-
-ramka = pd.DataFrame({'kolumna1': [1, 2, 3], 'kolumna2': [4, 5, 6]})
-print(ramka)
+def kwadrat_slownika():
+    slownik = {1:1, 2:2.5, 3:3.9, 4:4, 5:4.3,6:4.5} 
+    for i in slownik:
+        if slownik[i] == int(slownik[i]):
+            slownik[i] = slownik[i]**2
+    nowy_slownik = {klucze:wartosc**2 for (klucze,wartosc) in slownik.items() if wartosc==int(wartosc)} 
+    print(slownik)
+    print(nowy_slownik)
+kwadrat_slownika()
