@@ -21,7 +21,7 @@ import numpy as np
 
 
 def zmiana_w_tablicy():
-    tab = np.arange(1,65).reshape(8, 8)
+    tab = np.arange(64).reshape(8, 8)
     tab[-1, :] = 0 # wiersz
     tab[:, -1] = 0 # kolumna
     print(tab)
@@ -30,6 +30,8 @@ def zmiana_w_tablicy():
 zmiana_w_tablicy()
 
 # 3.
+
+
 import random
 
 
