@@ -55,7 +55,7 @@ np.savetxt("plik_testowy.csv", tablica, delimiter=",")
 
 
 
-plik = open("\\python\\Friendly Competition.csv", "r")
+plik = open("C:\\Users\\rafalkaminski\\AISTUDY\\AISTUDY\\python\\pliki\\Friendly Competition2.csv", "r")
 dane = plik.readlines()
 plik.close()
 
