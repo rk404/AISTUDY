@@ -70,3 +70,65 @@ print(df)
 df = df.dropna(axis=0)
 print(df)
 
+pętla malejąca
+
+for i in range(10, 0, -1):
+    print(i)
+
+    program czytający od końca teks podany przez użytkownika
+zmienna = input("Podaj tekst: ")
+for i in range(len(zmienna)-1, -1, -1):
+    print(zmienna[i], end='')
+
+
+
+def potega(x,y):
+   z = x ** y
+   return z
+def main():
+    x = int(input("Liczba: "))
+    y = int(input("do potęgi: "))
+    print(potega(x,y))
+main()
+
+
+def petla():
+   zmienna = "Koty"
+   slownik = {}
+   i = 0
+   k = 1
+   while i < len(zmienna):
+    print(i)
+    slownik[k] = zmienna[i]
+    k = k + 1
+    i = i + 1
+    print(slownik)
+petla()
+      
+
+
+def rabarbar():
+    slowo = input("Podaj słowo: ")
+    slownik = {}
+    i = 0
+    for i in range(len(slowo)):
+      if slowo[i] not in slownik:
+         slownik[slowo[i]] = 1
+    #    slownik.update({slowo[i]:1})
+      else:
+         slownik[slowo[i]] = slownik[slowo[i]] + 1
+    #     slownik.update({slowo[i]:slownik.get(slowo[i])+1})
+    print(slownik)
+rabarbar()
+
+
+def pole_trojkata(a,h):
+    pole = 0.5*a*h
+    return pole
+
+def wywolanie():
+    input()
+
+
+
+

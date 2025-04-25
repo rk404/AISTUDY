@@ -231,10 +231,13 @@ glosowanie()
 import random 
 def rzut_lewa_moneta():
     ORZEL=0.7 
-    if random.random()<ORZEL: 
+    prawdopo = random.random()
+    if prawdopo<ORZEL: 
         print("Orzeł") 
+        print(prawdopo)
     else: 
         print("Reszka")
+        print(prawdopo)
 rzut_lewa_moneta()
 
 """
@@ -451,7 +454,7 @@ dlugosc_slow()
 def kwadraty():
     lista = [2,4,5]
     for i in range(len(lista)):
-        lista[i] = int(lista[i])*int(lista[i])
+        lista[i] = int(lista[i])**2
     print(lista)
 kwadraty()
 
@@ -790,8 +793,7 @@ import random
 
 
 def liczenie_do_czasu():
-    zakres = 10
-    for i in range(zakres):
+    for i in range(10):
         prawdopodobienstwo_wydruku = random.random()
         if prawdopodobienstwo_wydruku < 0.3:
             print(i+1)
@@ -801,6 +803,8 @@ def liczenie_do_czasu():
 
 
 liczenie_do_czasu()
+
+
 
 
 """
@@ -915,3 +919,20 @@ srednia_tablicy()
 
 
 
+import random 
+PRAWDOPODOBIENSTWO = 0.3 
+def liczenie(): 
+    for i in range (10): 
+        obecna_liczba = i+1 
+        if decyzja(): 
+            return 
+        print(obecna_liczba) 
+def decyzja(): 
+    if random.random() < PRAWDOPODOBIENSTWO: 
+        return True 
+    return False 
+def main(): 
+    print('Będę liczyć do 10, chyba że mi się odechce.') 
+    liczenie() 
+    print('No to tyle') 
+main()
