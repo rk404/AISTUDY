@@ -130,5 +130,21 @@ def wywolanie():
     input()
 
 
+Stwórz tablice 8 x 8 i wypełnij ją liczbami od 1 do 64. Zamień ostatni wiersz i ostatnią kolumnę na 0.
+
+import numpy as np
+tablica = np.arange(1, 65).reshape(8, 8) 
+print(tablica)
+
+
+
+    
+
+
+
+
+    
+
+
 
 
