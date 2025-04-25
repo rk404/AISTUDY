@@ -812,16 +812,16 @@ Na koniec powiedz użytkownikowi ile podał znaków.
 
 
 def zapis_dp_pliku():
-    plik = open("plik_01.txt", "a")
+    plik5 = open("plik_01.txt", "a")
     tresc = input("Podaj treść: ")
-    if plik.writable():
-        plik.write(tresc)
-        plik.write("\n")
+    if plik5.writable():
+        plik5.write(tresc)
+        plik5.write("\n")
         liczba_znakow = len(tresc)
         print("Podałeś ", liczba_znakow, "znaków.")
     else:
         print("Brak uprawnień do zapisu")
-    plik.close()
+    plik5.close()
 
 
 zapis_dp_pliku()
@@ -912,5 +912,6 @@ def srednia_tablicy():
     print(tab1)
     print("Średnia elementów tablicy to: ", srednia)
 srednia_tablicy()
+
 
 
